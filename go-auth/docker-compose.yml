@@ -1,0 +1,13 @@
+version: "1"
+services:
+  go-auth:
+    image: gath
+    ports:
+      - "8080:8080"
+    environment:
+      - RAILWAY_PG_CONNECTION_STRING=postgresql://postgres:foobar@containers-us-west-99.railway.app:1234/railway
+      - GOOGLE_SMTP=pyrxjujaqxopulzg
+      - SENDGRID_API_KEY=foobar
+      - SENDGRID_FROM_EMAIL=foobar
+      - SENDGRID_FROM_USERNAME=mrfoobar
+      - JWT_SIGNING_KEY=foobar
